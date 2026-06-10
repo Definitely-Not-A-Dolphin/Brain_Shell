@@ -180,6 +180,8 @@
             config = lib.mkIf cfg.enable {
               environment.systemPackages = [ brain-shell ];
 
+              # This can't even be configured this way, so just tell the user to manually add it to their config or something.
+
               # wayland.windowManager.hyprland.settings = lib.mkIf cfg.autostart {
               #   exec-once = [
               #     "brain-shell"
