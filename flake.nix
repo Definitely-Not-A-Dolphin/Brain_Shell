@@ -180,16 +180,16 @@
             config = lib.mkIf cfg.enable {
               environment.systemPackages = [ brain-shell ];
 
-              wayland.windowManager.hyprland.settings = lib.mkIf cfg.autostart {
-                exec-once = [
-                  "brain-shell"
-                  "hypridle"
-                  "awww-daemon"
-                  "systemctl --user start hyprpolkitagent"
-                  "wl-paste --type text  --watch cliphist store"
-                  "wl-paste --type image --watch cliphist store"
-                ];
-              };
+              # wayland.windowManager.hyprland.settings = lib.mkIf cfg.autostart {
+              #   exec-once = [
+              #     "brain-shell"
+              #     "hypridle"
+              #     "awww-daemon"
+              #     "systemctl --user start hyprpolkitagent"
+              #     "wl-paste --type text  --watch cliphist store"
+              #     "wl-paste --type image --watch cliphist store"
+              #   ];
+              # };
             };
           };
 
